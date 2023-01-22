@@ -61,4 +61,5 @@ def shot_cafe_scraping():
     for img in film_images:
         final_images.append(urljoin(base_url, img.replace("/t/", "/o/")))
         
+        
     return [film_title, final_images]

@@ -25,13 +25,13 @@
   <div class="container">
     <h1 class="text-center mb-5">Guess the Film</h1>
     <div class="text-center">
-      <img id="film-image" src={{ img }} class="img-fluid" height="900" width="900" style="background-color: box-shadow: 2px 2px 5px #ccc; border: 3px solid #ccc; border-radius: 10px; transition: all 0.5s ease-in-out; filter: brightness(150%) contrast(200%); -webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-drag: none;" oncontextmenu="return false;">
+      <img id="film-image" src={{ img }} class="img-fluid" height="900" width="900" style="background-color: box-shadow: 2px 2px 5px #ccc; border: 3px solid #ccc; border-radius: 10px; transition: all 0.5s ease-in-out; -webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-drag: none;" oncontextmenu="return false;">
     </div>
     <br>
     <form action="/submit" method="post" enctype="multipart/form-data">
       <div class="text-center">
         <label for="film_g">Your Guess:</label>
-        <input type="text" class="form-control" id="film_guess" name="film_guess" {{ "disabled" if desactiva else "required" }}>
+        <input type="text" class="form-control" id="film_guess" name="film_guess" autocomplete="off" {{ "disabled" if desactiva else "required" }}>
         <label class="{{ 'text-success' if correct_guess else 'text-danger' }}"> {{ incorrect_guess if incorrect_guess else correct_guess }} </label>
       </div>
       <div class="text-center">
