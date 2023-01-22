@@ -9,8 +9,6 @@ FILM_NAME = None
 FILM_IMGS = None
 templates = Jinja2Templates(directory="templates/")
 
-
-
 @app.get('/')
 def read_form(request: Request):
     global INTENTOS
